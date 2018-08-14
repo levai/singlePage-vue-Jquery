@@ -36,10 +36,12 @@ module.exports = {
       },
       {
         test: /\.css$/,
+        exclude: /node_modules/,
         use: ['style-loader', 'css-loader']
       },
       {
         test: /\.less$/,
+        exclude: /node_modules/,
         use: ['style-loader', 'css-loader','postcss-loader','less-loader']
       },
       {
@@ -58,6 +60,7 @@ module.exports = {
       },
       {
         test: /\.(png|jpeg|jpg|gif|svg)(\?.*)?$/,
+        exclude: /node_modules/,
         use: [{
           loader: 'url-loader',
           options: { // options选项参数可以定义多大的图片转换为base64
